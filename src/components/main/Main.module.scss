@@ -1,0 +1,50 @@
+@import "src/sass/variables/variables";
+@import "src/sass/variables/extensions";
+
+.main {
+  position: relative;
+  height: 100vh;
+  @include flexDirection(row);
+  @extend %spaceB;
+  background-color: #bee2a8;
+  border: 2px black solid;
+  @extend %projectPadding;
+
+  &__text {
+    text-align: left;
+    font: 500 initial/1.4 "Bahnschrift";
+  }
+
+  &__bottomBorder {
+    position: relative;
+    z-index: 2;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 10px;
+      width: 103%;
+      z-index: 1;
+      opacity: 0.5;
+      background: #eab05d;
+    }
+  }
+
+  &__photo {
+    position: relative;
+    @include makeWH(250px, 400px);
+    border: 3px violet solid;
+  }
+
+  &__photoFrame {
+    @include makeWH(250px, 400px);
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    z-index: 1;
+    background: url("https://images5.alphacoders.com/924/924242.jpg") center/cover no-repeat;
+  }
+}

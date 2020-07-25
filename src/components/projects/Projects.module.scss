@@ -1,0 +1,20 @@
+@import "src/sass/variables/variables";
+@import "src/sass/variables/extensions";
+
+.projects {
+  background-color: #c99b9b;
+  @extend %projectPadding;
+  border: 2px greenyellow solid;
+
+  &__title {
+    @extend %title;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    grid-template-rows: repeat(2, 1.5fr);
+    grid-row-gap: 15px;
+  }
+}

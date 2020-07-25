@@ -1,0 +1,26 @@
+@import "src/sass/variables/variables";
+
+.skillItem {
+  @include flexDirection(column);
+  @include flexCenter;
+  border: 2px darkred solid;
+
+  &__logo {
+    width: 25%;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  &__title {
+    margin: 15px 0 0 0;
+    font: 700 1.1rem/1.6 "Century Gothic";
+    border-bottom: 3px black solid;
+    text-shadow: 2px 2px 9px black;
+  }
+
+  &__description {
+    font: 500 .8rem/1.3 "Century Gothic";
+    padding: 5px 30px;
+  }
+}

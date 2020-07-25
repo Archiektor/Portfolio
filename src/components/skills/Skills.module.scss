@@ -1,0 +1,20 @@
+@import "src/sass/variables/variables";
+@import "src/components/main/Main.module";
+
+.skills {
+  @extend %projectPadding;
+  background-color: #b384d5;
+
+  &__title {
+    @extend %title;
+  }
+
+  &__grid {
+    border: 2px solid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 50px;
+  }
+}
