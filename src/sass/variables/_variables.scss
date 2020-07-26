@@ -38,29 +38,6 @@ $font-weights: (
   height: $height;
 }
 
-//@mixin font($font-weight: normal, $font-size: normal, $line-height: normal, $letter-spacing: normal) {
-//  //font-size: $font-size * 1px;
-//  font-size: $font-size * 0.1rem;
-//
-//  @if $font-weight==normal {
-//    font-weight: 500;
-//  } @else {
-//    font-weight: 800;
-//  }
-//
-//  @if $line-height==normal {
-//    line-height: normal;
-//  } @else {
-//    line-height: $line-height / $font-size;
-//  }
-//
-//  @if $letter-spacing==normal {
-//    letter-spacing: normal;
-//  } @else {
-//    letter-spacing: #{$letter-spacing / $font-size}em;
-//  }
-//}
-
 @mixin coverBackground {
   background-repeat: no-repeat;
   background-size: cover;

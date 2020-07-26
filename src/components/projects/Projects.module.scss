@@ -3,8 +3,8 @@
 
 .projects {
   background-color: #c99b9b;
-  @extend %projectPadding;
   border: 2px greenyellow solid;
+  @extend %projectPadding;
 
   &__title {
     @extend %title;

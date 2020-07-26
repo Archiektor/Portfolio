@@ -1,0 +1,31 @@
+@import "src/sass/variables/variables";
+@import "src/sass/variables/extensions";
+
+.contacts {
+  @include flexDirection(column);
+  @extend %flexCenter;
+  border: 2px coral solid;
+  position: relative;
+  min-height: 400px;
+
+  &__text {
+    position: absolute;
+    margin: 0 auto;
+    top: 5px;
+    @extend %title;
+  }
+
+  &__form {
+    @include flexDirection(column);
+    min-width: 400px;
+  }
+
+  &__input {
+    background-color: #acb8c2;
+  }
+
+  &__textArea {
+    background-color: #acb8c2;
+    min-height: 80px;
+  }
+}

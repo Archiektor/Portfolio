@@ -3,6 +3,7 @@ import s from './Skills.module.scss';
 import SkillItem from '../skillItem/SkillItem';
 import {v1} from 'uuid';
 
+
 type DataType = Array<{ key: string, nameOfSkill: string, img: string, description: string }>
 
 const skillsData: DataType = [
@@ -44,12 +45,13 @@ const skillsData: DataType = [
     },
 ]
 
-const Skills: React.FC<{}> = React.memo(() => {
+const Skills: React.FC<{ id: string }> = React.memo(({id}) => {
         return (
-            <div className={s.skills}>
+            <div className={s.skills} id={id}>
                 <div className={s.skills__title}>My skills</div>
                 <div className={s.skills__grid}>
-                    {skillsData.map(i => <SkillItem key={i.key} img={i.img} description={i.description}>{i.nameOfSkill}</SkillItem>)}
+                    {skillsData.map(i => <SkillItem key={i.key} img={i.img}
+                                                    description={i.description}>{i.nameOfSkill}</SkillItem>)}
                 </div>
             </div>
         )

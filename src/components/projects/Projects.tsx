@@ -2,58 +2,72 @@ import React from 'react';
 import s from './Projects.module.scss';
 import {v1} from 'uuid';
 import ProjectItem from '../projectItem/ProjectItem';
+import projectPic1 from '../../assets/pictures/1.jpg';
+import projectPic2 from '../../assets/pictures/2.jpg';
+import projectPic3 from '../../assets/pictures/3.jpg';
+import projectPic4 from '../../assets/pictures/4.jpg';
+import projectPic5 from '../../assets/pictures/5.jpg';
+import projectPic6 from '../../assets/pictures/6.jpg';
 
-const projectsData: Array<{ key: string, nameOfProject: string, link: string, descr: string, stack: string }> = [
+
+const projectsData: Array<{ key: string, nameOfProject: string, link: string, descr: string, stack: string, pic: string }> = [
     {
         key: v1(),
         nameOfProject: `Samuraj Messenger`,
         link: `https://archiektor.github.io/Messenger/`,
         descr: `A big project with aim to copy FB app.`,
-        stack: `Stack: React/Redux/TS/JS//SCSS/Jest/TDD/REST/redux-form/reselectors/redux-thunk/redux-ducks`
+        stack: `Stack: React/Redux/TS/JS//SCSS/Jest/TDD/REST`,
+        pic: projectPic1,
     },
     {
         key: v1(),
         nameOfProject: `React Counter`,
         link: `https://archiektor.github.io/Counter/`,
         descr: `A small counter with TS, React/Redux and Sass`,
-        stack: `Stack: React/Redux/TS/ on start JS/ SCSS`
+        stack: `Stack: React/Redux/TS/ on start JS/ SCSS`,
+        pic: projectPic2,
     },
     {
         key: v1(),
         nameOfProject: `Coctail DB`,
         link: `https://archiektor.github.io/Coctail-DB/`,
         descr: `Small app for parties and barmens`,
-        stack: `Stack: React/JS/hooks`
+        stack: `Stack: React/JS/hooks`,
+        pic: projectPic3,
     },
     {
         key: v1(),
         nameOfProject: `StarWars DB`,
         link: `https://github.com/Archiektor/Star-DB`,
         descr: `React App based on StarWars API. Made with help of Udemy Course by Juriy Bura`,
-        stack: `React/Router/Hooks/HOC/Api`
+        stack: `React/Router/Hooks/HOC/Api`,
+        pic: projectPic4,
     },
     {
         key: v1(),
-        nameOfProject: `HeartRate Monitor site`,
+        nameOfProject: `HeartRate Monitor`,
         link: `https://www.cloudmist.ru/`,
         descr: `second site on private server`,
-        stack: `JS/SASS/PHP`
+        stack: `JS/SASS/PHP`,
+        pic: projectPic5,
     },
     {
         key: v1(),
         nameOfProject: `UberPartners`,
         link: `https://test.cloudmist.ru/`,
         descr: `my first site)`,
-        stack: `JS/CSS`
+        stack: `JS/CSS`,
+        pic: projectPic6,
     },
 ]
 
-const Projects: React.FC<{}> = React.memo(() => {
+const Projects: React.FC<{id: string}> = React.memo(({id}) => {
     return (
-        <div className={s.projects}>
+        <div className={s.projects} id={id}>
             <div><h3 className={s.projects__title}>{`Projects`}</h3></div>
             <div className={s.projects__grid}>
-                {projectsData.map(p => <ProjectItem key={p.key}>{p.nameOfProject}</ProjectItem>)}
+                {projectsData.map(p => <ProjectItem key={p.key} pic={p.pic} link={p.link} descr={p.descr}
+                                                    stack={p.stack}>{p.nameOfProject}</ProjectItem>)}
             </div>
         </div>
     )

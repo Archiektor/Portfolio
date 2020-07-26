@@ -1,9 +1,9 @@
 import React from 'react';
 import s from './Main.module.scss';
 
-const Main: React.FC<{}> = () => {
+const Main: React.FC<{id: string}> = ({id}) => {
     return (
-        <div className={s.main}>
+        <div id={id} className={s.main}>
             <div className={s.main__text}>
                 <p>Hi there</p>
                 <h2>I'm <span className={s.main__bottomBorder}>Nikita Odintsov</span></h2>

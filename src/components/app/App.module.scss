@@ -1,6 +1,22 @@
+@import "src/sass/variables/variables";
+@import "src/components/main/Main.module";
+
 .container {
-  width: 90%;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
   background-color: slategray;
+
+  &__upload {
+    display: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    @include makeWH(30px, 30px);
+
+    &_show {
+      display: initial;
+    }
+  }
 }

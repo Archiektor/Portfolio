@@ -2,6 +2,7 @@
 @import "src/components/main/Main.module";
 
 .skills {
+  position: relative;
   @extend %projectPadding;
   background-color: #b384d5;
 

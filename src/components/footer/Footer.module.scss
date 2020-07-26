@@ -1,0 +1,46 @@
+@import "src/sass/variables/variables";
+@import "src/sass/variables/extensions";
+
+.footer {
+  margin: 0 auto;
+  @include flexDirection(column);
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  max-width: 600px;
+  min-height: 160px;
+
+  &__fullName {
+    @extend %title;
+    position: relative;
+  }
+
+  &__iconsBlock {
+    width: 40%;
+    margin-top: 10px;
+    @include flexDirection(row);
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__iconFrame {
+    @include makeWH(40px, 40px);
+    border: 3px solid darkgoldenrod;
+    transform: rotate(45deg);
+    @include flexCenter;
+  }
+
+  &__img {
+    @include makeWH(30px, 30px);
+    transform: rotate(-45deg);
+  }
+
+  &__copyright {
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+}
