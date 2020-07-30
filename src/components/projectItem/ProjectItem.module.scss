@@ -35,6 +35,10 @@
     position: relative;
   }
 
+  &__link {
+    @extend %posABtn;
+  }
+
   &__pic {
     width: 100%;
     min-height: 260px;
@@ -48,8 +52,9 @@
 
   &__textBlock {
     @include makeWH(290px, 120px);
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
+
 
     @include mediaQuery($mobile) {
       width: 100%;
@@ -58,7 +63,7 @@
   }
 
   &__name {
-    font: 700 1.0rem/1.3 "Century Gothic";
+    font: 700 1.0rem/1.3 $mainFont;
     text-align: center;
     position: relative;
     border-bottom: 2px black solid;
@@ -70,7 +75,7 @@
 
   &__descr {
     margin-top: 5px;
-    font: 500 .9rem/1.3 "Century Gothic";
+    font: 500 .9rem/1.3 $mainFont;
 
     &::first-letter {
       @extend %firstLetter;
@@ -87,7 +92,7 @@
 
   &__stack {
     margin-top: 5px;
-    font: 500 .9rem/1.3 "Century Gothic";
+    font: 500 .9rem/1.0 $mainFont;
 
     &::first-letter {
       @extend %firstLetter;

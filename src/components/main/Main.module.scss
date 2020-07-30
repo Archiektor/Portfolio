@@ -22,20 +22,20 @@
     @include mediaQuery($mobileM) {
       flex-direction: column;
       margin-bottom: 25px;
-      height: 55vh;
+      height: 57vh;
     }
 
     @include mediaQuery($mobile) {
       flex-direction: column;
       margin-top: 5px;
-      margin-bottom: 25px;
-      height: 55vh;
+      margin-bottom: 35px;
+      height: 63vh;
     }
   }
 
   &__text {
     text-align: left;
-    font: 500 initial/1.4 "Bahnschrift";
+    font: 500 initial/1.4 $additionalFont1;
 
     & h3 {
       padding-bottom: 15px;

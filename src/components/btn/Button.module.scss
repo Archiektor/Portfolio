@@ -1,19 +1,13 @@
 @import "src/sass/variables/variables";
 @import "src/sass/variables/extensions";
 
-%posABtn {
-  position: absolute;
-  z-index: 1;
-  margin: 0 auto;
-  bottom: 30px;
-}
 
 .btn {
   @include makeWH(100px, 30px);
   border-radius: 5px;
   background-color: #cec6c6;
   color: #69bdad;
-  font: 700 .9rem "GOST Common";
+  font: 700 .9rem $additionalFont1;
   opacity: 0.4;
   text-transform: uppercase;
 
@@ -22,11 +16,9 @@
   }
 
   &_upper {
-   @extend %posABtn;
   }
 
   &_bigger {
-    @extend %posABtn;
     @include makeWH(130px, 40px);
     bottom: 0;
     font-size: 1.1rem;
