@@ -16,7 +16,7 @@ const Button: React.FC<ButtonType> = React.memo(({style}) => {
         default:
             btnStyle = `${s.btn}`;
     }
-    return (<button className={btnStyle}>push</button>)
+    return (<button className={btnStyle}>goto</button>)
 })
 
 export default Button;

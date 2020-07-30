@@ -1,7 +1,26 @@
+@import "src/sass/variables/extensions";
+@import "src/sass/variables/variables";
+
 .header {
   height: 60px;
   background-color: #adcdc7;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  @include flexCenter;
+
+  &__container {
+    position: relative;
+    @extend %container;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+    border: 2px solid;
+
+    @include mediaQuery($mobile) {
+      justify-content: center;
+    }
+
+    @include mediaQuery($mobileM) {
+      justify-content: center;
+    }
+  }
 }

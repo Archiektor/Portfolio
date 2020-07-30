@@ -16,7 +16,7 @@ const projectsData: Array<{ key: string, nameOfProject: string, link: string, de
         nameOfProject: `Samuraj Messenger`,
         link: `https://archiektor.github.io/Messenger/`,
         descr: `A big project with aim to copy FB app.`,
-        stack: `Stack: React/Redux/TS/JS//SCSS/Jest/TDD/REST`,
+        stack: `React/Redux/TS/JS//SCSS/Jest/TDD/REST`,
         pic: projectPic1,
     },
     {
@@ -24,7 +24,7 @@ const projectsData: Array<{ key: string, nameOfProject: string, link: string, de
         nameOfProject: `React Counter`,
         link: `https://archiektor.github.io/Counter/`,
         descr: `A small counter with TS, React/Redux and Sass`,
-        stack: `Stack: React/Redux/TS/ on start JS/ SCSS`,
+        stack: `React/Redux/TS/ on start JS/ SCSS`,
         pic: projectPic2,
     },
     {
@@ -32,7 +32,7 @@ const projectsData: Array<{ key: string, nameOfProject: string, link: string, de
         nameOfProject: `Coctail DB`,
         link: `https://archiektor.github.io/Coctail-DB/`,
         descr: `Small app for parties and barmens`,
-        stack: `Stack: React/JS/hooks`,
+        stack: `React/JS/hooks`,
         pic: projectPic3,
     },
     {
@@ -64,11 +64,13 @@ const projectsData: Array<{ key: string, nameOfProject: string, link: string, de
 const Projects: React.FC<{id: string}> = React.memo(({id}) => {
     return (
         <div className={s.projects} id={id}>
-            <div><h3 className={s.projects__title}>{`Projects`}</h3></div>
-            <div className={s.projects__grid}>
-                {projectsData.map(p => <ProjectItem key={p.key} pic={p.pic} link={p.link} descr={p.descr}
-                                                    stack={p.stack}>{p.nameOfProject}</ProjectItem>)}
-            </div>
+           <div className={s.projects__container}>
+               <div><h3 className={s.projects__title}>{`Projects`}</h3></div>
+               <div className={s.projects__grid}>
+                   {projectsData.map(p => <ProjectItem key={p.key} pic={p.pic} link={p.link} descr={p.descr}
+                                                       stack={p.stack}>{p.nameOfProject}</ProjectItem>)}
+               </div>
+           </div>
         </div>
     )
 })

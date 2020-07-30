@@ -2,9 +2,13 @@
 @import "src/components/main/Main.module";
 
 .skills {
-  position: relative;
-  @extend %projectPadding;
   background-color: #b384d5;
+  padding-top: 10px;
+
+  &__container {
+    position: relative;
+    @extend %container;
+  }
 
   &__title {
     @extend %title;
@@ -17,5 +21,20 @@
     grid-column-gap: 30px;
     grid-template-rows: repeat(2, 1fr);
     grid-row-gap: 50px;
+
+    @include mediaQuery($mobileL) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 10px;
+    }
+
+    @include mediaQuery($mobileM) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 5px;
+    }
+
+    @include mediaQuery($mobile) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 5px;
+    }
   }
 }

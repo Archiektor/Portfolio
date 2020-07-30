@@ -5,8 +5,15 @@
   @include flexDirection(column);
   @extend %flexCenter;
   border: 2px coral solid;
-  position: relative;
-  min-height: 400px;
+  padding-bottom: 10px;
+
+  &__container {
+    @include flexDirection(column);
+    @extend %flexCenter;
+    position: relative;
+    min-height: 400px;
+    @extend %container;
+  }
 
   &__text {
     position: absolute;
@@ -18,6 +25,18 @@
   &__form {
     @include flexDirection(column);
     min-width: 400px;
+
+    @include mediaQuery($mobileL) {
+      min-width: 300px;
+    }
+
+    @include mediaQuery($mobileM) {
+      min-width: 275px;
+    }
+
+    @include mediaQuery($mobile) {
+      min-width: 240px;
+    }
   }
 
   &__input {

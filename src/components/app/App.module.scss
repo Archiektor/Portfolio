@@ -3,17 +3,21 @@
 
 .container {
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   background-color: slategray;
 
   &__upload {
     display: none;
     position: fixed;
-    top: 15px;
-    right: 15px;
+    bottom: 20px;
+    right: 20px;
     z-index: 1;
     @include makeWH(30px, 30px);
+
+    @include mediaQuery($mobile) {
+      bottom: 5px;
+      right: 5px;
+    }
 
     &_show {
       display: initial;

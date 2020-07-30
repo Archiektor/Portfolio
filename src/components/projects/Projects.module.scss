@@ -3,8 +3,11 @@
 
 .projects {
   background-color: #c99b9b;
-  border: 2px greenyellow solid;
-  @extend %projectPadding;
+
+  &__container {
+    border: 2px greenyellow solid;
+    @extend %container;
+  }
 
   &__title {
     @extend %title;
@@ -16,5 +19,22 @@
     justify-content: space-between;
     grid-template-rows: repeat(2, 1.5fr);
     grid-row-gap: 15px;
+
+    @include mediaQuery($large) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    @include mediaQuery($mobileL) {
+      grid-template-columns: 1fr;
+    }
+
+    @include mediaQuery($mobileM) {
+      grid-template-columns: 1fr;
+    }
+
+    @include mediaQuery($mobile) {
+      grid-template-columns: 1fr;
+    }
   }
 }

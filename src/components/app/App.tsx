@@ -9,7 +9,7 @@ import Footer from '../footer/Footer';
 import upload from '../../assets/icons/upload.png';
 
 
-const App: React.FC<{}> = () => {
+const App: React.FC = () => {
     const [style, setStyle] = useState<string>(`${s.container__upload}`);
     const [showScroll, setShowScroll] = useState(false);
 

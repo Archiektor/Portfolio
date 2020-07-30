@@ -5,8 +5,26 @@
   z-index: 999;
   @include flexDirection(row);
   justify-content: space-between;
-  margin-right: 150px;
+  margin-right: 50px;
   width: 30%;
+
+  @include mediaQuery($mobile) {
+    width: 80%;
+    margin-right: 0;
+    justify-content: space-evenly;
+  }
+
+  @include mediaQuery($mobileM) {
+    width: 80%;
+    margin-right: 0;
+    justify-content: space-evenly;
+  }
+
+  @include mediaQuery($mobileL) {
+    width: 80%;
+    margin-right: 0;
+    justify-content: space-evenly;
+  }
 
   &_active {
     border-bottom: 3px solid;

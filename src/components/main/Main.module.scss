@@ -2,17 +2,57 @@
 @import "src/sass/variables/extensions";
 
 .main {
-  position: relative;
-  height: 100vh;
   @include flexDirection(row);
   @extend %spaceB;
   background-color: #bee2a8;
-  border: 2px black solid;
-  @extend %projectPadding;
+
+  &__container {
+    position: relative;
+    height: 100vh;
+    @include flexDirection(row);
+    @extend %spaceB;
+    @extend %container;
+
+    @include mediaQuery($mobileL) {
+      flex-direction: column;
+      margin-bottom: 90px;
+      height: 70vh;
+    }
+
+    @include mediaQuery($mobileM) {
+      flex-direction: column;
+      margin-bottom: 25px;
+      height: 55vh;
+    }
+
+    @include mediaQuery($mobile) {
+      flex-direction: column;
+      margin-top: 5px;
+      margin-bottom: 25px;
+      height: 55vh;
+    }
+  }
 
   &__text {
     text-align: left;
     font: 500 initial/1.4 "Bahnschrift";
+
+    & h3 {
+      padding-bottom: 15px;
+    }
+
+    * {
+
+      @include mediaQuery($mobile) {
+        padding: 5px 0 2px 0;
+        margin: 0;
+      }
+
+      @include mediaQuery($mobileM) {
+        padding: 5px 0 2px 0;
+        margin: 0;
+      }
+    }
   }
 
   &__bottomBorder {
@@ -37,6 +77,14 @@
     position: relative;
     @include makeWH(250px, 400px);
     border: 3px violet solid;
+
+    @include mediaQuery($mobile) {
+      @include makeWH(200px, 250px);
+    }
+
+    @include mediaQuery($mobileM) {
+      @include makeWH(200px, 250px);
+    }
   }
 
   &__photoFrame {
@@ -46,5 +94,17 @@
     top: 20px;
     z-index: 1;
     background: url("https://images5.alphacoders.com/924/924242.jpg") center/cover no-repeat;
+
+    @include mediaQuery($mobile) {
+      @include makeWH(200px, 250px);
+      left: 10px;
+      top: 10px;
+    }
+
+    @include mediaQuery($mobileM) {
+      @include makeWH(200px, 250px);
+      left: 10px;
+      top: 10px;
+    }
   }
 }

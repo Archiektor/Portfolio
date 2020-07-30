@@ -3,12 +3,19 @@
 
 .footer {
   margin: 0 auto;
-  @include flexDirection(column);
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
   max-width: 600px;
   min-height: 160px;
+
+  &__container {
+    margin: 0 auto;
+    @include flexDirection(column);
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    max-width: 600px;
+    min-height: 160px;
+    @extend %container;
+  }
 
   &__fullName {
     @extend %title;
@@ -21,6 +28,18 @@
     @include flexDirection(row);
     justify-content: space-evenly;
     align-items: center;
+
+    @include mediaQuery($mobileL) {
+      width: 80%;
+    }
+
+    @include mediaQuery($mobileM) {
+      width: 80%;
+    }
+
+    @include mediaQuery($mobile) {
+      width: 80%;
+    }
   }
 
   &__iconFrame {
@@ -42,5 +61,15 @@
     left: 0;
     right: 0;
     text-align: center;
+
+    @include mediaQuery($mobileM) {
+      margin-top: 15px;
+      font-size: 0.8rem;
+    }
+
+    @include mediaQuery($mobile) {
+      margin-top: 20px;
+      font-size: 0.75rem;
+    }
   }
 }

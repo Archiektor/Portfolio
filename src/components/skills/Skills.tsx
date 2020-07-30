@@ -48,10 +48,12 @@ const skillsData: DataType = [
 const Skills: React.FC<{ id: string }> = React.memo(({id}) => {
         return (
             <div className={s.skills} id={id}>
-                <div className={s.skills__title}>My skills</div>
-                <div className={s.skills__grid}>
-                    {skillsData.map(i => <SkillItem key={i.key} img={i.img}
-                                                    description={i.description}>{i.nameOfSkill}</SkillItem>)}
+                <div className={s.skills__container}>
+                    <div className={s.skills__title}>My skills</div>
+                    <div className={s.skills__grid}>
+                        {skillsData.map(i => <SkillItem key={i.key} img={i.img}
+                                                        description={i.description}>{i.nameOfSkill}</SkillItem>)}
+                    </div>
                 </div>
             </div>
         )
