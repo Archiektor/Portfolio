@@ -1,12 +1,49 @@
 @import "src/sass/variables/variables";
+@import "src/sass/variables/extensions";
+
+%leftPartOfIcon {
+  @extend %menuIcon;
+  width: 50%;
+  align-self: flex-start;
+}
 
 .nav {
-  position: fixed;
-  z-index: 999;
-  @include flexDirection(row);
-  justify-content: space-between;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   margin-right: 50px;
   width: 30%;
+  position: fixed;
+
+  &_visible {
+    width: 80%;
+    position: absolute;
+    top: 30px;
+  }
+
+  &__linkBlock {
+    opacity: 0;
+    display: flex;
+    @include flexDirection(column);
+
+    &_show {
+      opacity: 1;
+      position: absolute;
+      top: 75px;
+      left: 25px;
+    }
+  }
+
+  &__link {
+    font: 700 38px/1.6 'Poppins', sans-serif;
+    color: #fff;
+    transition: letter-spacing 0.5s ease-in-out 0s;
+
+    &:hover {
+      letter-spacing: 2px;
+
+    }
+  }
 
   @include mediaQuery($mobile) {
     width: 80%;
@@ -27,9 +64,48 @@
   }
 
   &_active {
-    border-bottom: 3px solid;
-    text-shadow: 3px 3px 9px black;
+    //border-bottom: 2px solid;
     opacity: 0.5;
-    background-color: #aaa6a6;
+  }
+
+  &__menuIcon {
+    box-sizing: border-box;
+    @include makeWH(25px, 25px);
+    @include flexCenter;
+    flex-flow: column nowrap;
+    transition: transform .2s ease, background-color .5s ease;
+
+    &_left {
+      @extend %leftPartOfIcon;
+    }
+
+    &_leftVisible {
+      @extend %leftPartOfIcon;
+      transform: rotate(45deg);
+      width: 35%;
+    }
+
+    &_mid {
+      @extend %menuIcon;
+    }
+
+    &_midVisible {
+      @extend %menuIcon;
+      transform: rotate(135deg);
+      width: 110%;
+    }
+
+    &_right {
+      @extend %menuIcon;
+      width: 50%;
+      align-self: flex-end;
+    }
+
+    &_rightVisible {
+      @extend %leftPartOfIcon;
+      align-self: flex-end;
+      transform: rotate(45deg);
+      width: 45%;
+    }
   }
 }

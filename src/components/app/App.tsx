@@ -9,7 +9,7 @@ import Footer from '../footer/Footer';
 import upload from '../../assets/icons/upload.png';
 
 
-const App: React.FC = () => {
+const App: React.FC = React.memo(() => {
     const [style, setStyle] = useState<string>(`${s.container__upload}`);
     const [showScroll, setShowScroll] = useState(false);
 
@@ -36,9 +36,9 @@ const App: React.FC = () => {
             <Projects id="projects"/>
             <Contacts id="contacts"/>
             <Footer/>
-            <img onClick={() => scrollTop()} className={style} src={upload} alt={`arrowToUp`}/>
+            <img onClick={() => scrollTop()} className={style} src={upload} alt={`arrowToScrollUp`}/>
         </div>
     );
-}
+})
 
 export default App;

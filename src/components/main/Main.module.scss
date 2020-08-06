@@ -7,7 +7,6 @@
   background-color: #bee2a8;
 
   &__container {
-    position: relative;
     height: 100vh;
     @include flexDirection(row);
     @extend %spaceB;
@@ -35,7 +34,7 @@
 
   &__text {
     text-align: left;
-    font: 500 initial/1.4 $additionalFont1;
+    font: 500 1.1rem/1.4 $mainFont;
 
     & h3 {
       padding-bottom: 15px;
@@ -58,6 +57,8 @@
   &__bottomBorder {
     position: relative;
     z-index: 2;
+    font-family: 'Monoton', cursive;
+    font-size: 2.2rem;
 
     &::after {
       content: "";

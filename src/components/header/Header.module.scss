@@ -3,17 +3,31 @@
 
 .header {
   height: 60px;
-  background-color: #adcdc7;
+  background-color: $darkcolor;
+  color: whitesmoke;
   @include flexCenter;
+  position: fixed;
+  left: 0;
+  right: 0;
+  transition: top 2s ease-in-out 1s;
+  z-index: 99;
+
+  &_visible {
+    top: 0;
+    bottom: 0;
+    height: auto;
+  }
 
   &__container {
-    position: relative;
     @extend %container;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 60px;
-    border: 2px solid;
+
+    &_visible {
+      justify-content: center;
+      align-items: flex-start;
+    }
 
     @include mediaQuery($mobile) {
       justify-content: center;
