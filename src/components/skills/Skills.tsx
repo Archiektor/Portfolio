@@ -2,6 +2,8 @@ import React from 'react';
 import s from './Skills.module.scss';
 import SkillItem from '../skillItem/SkillItem';
 import {v1} from 'uuid';
+import react from '../../assets/icons/react.png';
+import sass from '../../assets/icons/sass.png';
 
 
 type DataType = Array<{ key: string, nameOfSkill: string, img: string, description: string }>
@@ -10,14 +12,14 @@ const skillsData: DataType = [
     {
         key: v1(),
         nameOfSkill: `React`,
-        img: `https://blog.wyremski.pl/wp-content/uploads/2019/05/react.png`,
-        description: `with ReduxThunk, Redux-form, Reselectors, HOC and other...`
+        img: react,
+        description: `thunkMiddleWare, Redux-form, reselectors, HOC and other...`
     },
     {
         key: v1(),
         nameOfSkill: `Redux`,
         img: `https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Redux_Logo.png/640px-Redux_Logo.png`,
-        description: `no comments`
+        description: `all redux-toolkit`
     },
     {
         key: v1(),
@@ -34,8 +36,8 @@ const skillsData: DataType = [
     {
         key: v1(),
         nameOfSkill: `SASS/SCSS/BEM`,
-        img: `https://www.pngfind.com/pngs/m/452-4521456_scss-logo-hd-png-download.png`,
-        description: `no comments`
+        img: sass,
+        description: `@mixins %extensions variables func()`
     },
     {
         key: v1(),

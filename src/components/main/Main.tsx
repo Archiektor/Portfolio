@@ -7,7 +7,7 @@ const Main: React.FC<{id: string}> = ({id}) => {
            <div className={s.main__container}>
                <div className={s.main__text}>
                    <p>Hi there</p>
-                   <h2>I'm <span className={s.main__bottomBorder}>Nikita Odintsov</span></h2>
+                   <h2>I'm <span className={s.main__bottomBorder}>Nikita Odintsov.</span></h2>
                    <h3>A frontend dev.</h3>
                </div>
                <div className={s.main__photo}>

@@ -4,7 +4,11 @@
 .main {
   @include flexDirection(row);
   @extend %spaceB;
-  background-color: #bee2a8;
+  //background-color: #bee2a8;
+  background-image: $linearGrad;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   &__container {
     height: 100vh;
@@ -35,7 +39,7 @@
   &__text {
     text-align: left;
     font: 500 1.1rem/1.4 $mainFont;
-
+    color: #fff;
     & h3 {
       padding-bottom: 15px;
     }
@@ -58,7 +62,7 @@
     position: relative;
     z-index: 2;
     font-family: 'Monoton', cursive;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
 
     &::after {
       content: "";
@@ -66,18 +70,19 @@
       left: 0;
       right: 0;
       bottom: 0;
-      height: 10px;
+      height: 5px;
       width: 103%;
       z-index: 1;
       opacity: 0.5;
-      background: #eab05d;
+      background: #000000;
     }
   }
 
   &__photo {
     position: relative;
     @include makeWH(250px, 400px);
-    border: 3px violet solid;
+    border: 8px black dashed;
+    border-radius: 10px;
 
     @include mediaQuery($mobile) {
       @include makeWH(200px, 250px);
@@ -95,6 +100,7 @@
     top: 20px;
     z-index: 1;
     background: url("https://images5.alphacoders.com/924/924242.jpg") center/cover no-repeat;
+    border-radius: 10px;
 
     @include mediaQuery($mobile) {
       @include makeWH(200px, 250px);

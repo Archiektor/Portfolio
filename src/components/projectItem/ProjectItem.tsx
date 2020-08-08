@@ -17,9 +17,13 @@ const ProjectItem: React.FC<ProjectItemType> = React.memo(({descr, link, stack, 
                 <a className= {s.projectItem__link} href={link}><Button style={`upper`}/></a>
             </div>
             <div className={s.projectItem__textBlock}>
-                <div className={s.projectItem__name}>{props.children}</div>
-                <div className={s.projectItem__descr}>{`Description: ${descr}`}</div>
-                <div className={s.projectItem__stack}>{`Stack: ${stack}`}</div>
+                <div className={s.projectItem__name}><span>{props.children}</span></div>
+                <div className={s.projectItem__descr}>
+                    {<span>Description :</span>}{`${descr}`}
+                </div>
+                <div className={s.projectItem__stack}>
+                    {<span>Stack :</span>}{`${stack}`}
+                </div>
             </div>
         </div>)
 })

@@ -3,9 +3,12 @@ $yellowcolor: #7d8028;
 $darkredcolor: #7f2121;
 $violetcolor: #3e136a;
 $darkcolor: rgba(0, 0, 0, 1);
+$mainTextColor: whitesmoke;
 //background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;
 $mainFont: "Poppins";
 $additionalFont1: "Monoton";
+$linearGrad: linear-gradient(black, #393636, black);
+
 
 
 $font-weights: (
@@ -86,4 +89,38 @@ $desktop: 1280px;
     @content;
   }
 }
+
+/*@mixin textBlock($block) {
+  //in ProjectItem
+  &__$block {
+  margin-top: 5px;
+  font: 300 .9rem/1.0 $mainFont;
+
+  span {
+    margin-right: 5px;
+    font-weight: 500;
+  }
+
+  &::first-letter {
+    @extend %firstLetter;
+  }
+
+  @include mediaQuery($tablet) {
+    font-size: .9rem;
+  }
+
+  @include mediaQuery($mobileL) {
+    font-size: .85rem;
+  }
+
+  @include mediaQuery($mobileM) {
+    font-size: .8rem;
+  }
+
+  @include mediaQuery($mobile) {
+    font-size: .75rem;
+  }
+}
+}*/
+
 

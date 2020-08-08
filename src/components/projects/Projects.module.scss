@@ -2,10 +2,10 @@
 @import "src/sass/variables/extensions";
 
 .projects {
-  background-color: #c99b9b;
+  background-image: $linearGrad;
+  margin-top: -10px;
 
   &__container {
-    border: 2px greenyellow solid;
     @extend %container;
   }
 

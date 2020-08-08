@@ -2,8 +2,9 @@
 @import "src/components/main/Main.module";
 
 .skills {
-  background-color: #b384d5;
+  background-color: black;
   padding-top: 10px;
+  padding-bottom: 20px;
 
   &__container {
     @extend %container;
@@ -14,7 +15,6 @@
   }
 
   &__grid {
-    border: 2px solid;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 30px;

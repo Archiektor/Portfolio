@@ -1,3 +1,5 @@
+@import "src/sass/variables/variables";
+
 %spaceB {
   justify-content: space-between;
   align-items: center;
@@ -19,14 +21,15 @@
 
 %firstLetter {
   text-transform: uppercase;
-  color: #622b99;
+  font-weight: 700;
+  color: darkgrey;
 }
 
 %title {
-  font: 700 1.6rem/1.6 "Century Gothic";
+  font: 700 24px/1.6 $mainFont;
   text-align: center;
   margin: 10px 20px;
-  border: 2px solid darkred;
+  @extend %textColor;
 }
 
 %posABtn {
@@ -41,4 +44,8 @@
   width: 100%;
   background-color: white;
   margin: 0 0 3px 0;
+}
+
+%textColor {
+  color: $mainTextColor;
 }
