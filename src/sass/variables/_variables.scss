@@ -45,6 +45,11 @@ $font-weights: (
   height: $height;
 }
 
+@mixin marginHeight($top, $bottom) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
 @mixin coverBackground {
   background-repeat: no-repeat;
   background-size: cover;

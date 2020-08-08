@@ -3,11 +3,11 @@ import s from './Button.module.scss';
 
 type ButtonType = { style: string };
 
-const Button: React.FC<ButtonType> = React.memo(({style}) => {
+const Button: React.FC<ButtonType> = React.memo(({style, ...props}) => {
     let btnStyle: string;
     switch (style) {
         case 'upper':
-            btnStyle = `${s.btn} ${s.btn_upper}`;
+            btnStyle = `${s.btn}`;
             break;
         case 'bigger': {
             btnStyle = `${s.btn} ${s.btn_bigger}`;
@@ -19,7 +19,7 @@ const Button: React.FC<ButtonType> = React.memo(({style}) => {
     return (
         <button className={btnStyle}>
             <div className={s.arrow}>{}</div>
-            Go
+            {props.children}
         </button>)
 })
 

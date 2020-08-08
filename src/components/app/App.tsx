@@ -6,7 +6,7 @@ import Skills from '../skills/Skills';
 import Projects from '../projects/Projects';
 import Contacts from '../contacts/Contacts';
 import Footer from '../footer/Footer';
-import upload from '../../assets/icons/upload.png';
+import arrow from '../../assets/icons/arrow.svg';
 
 
 const App: React.FC = React.memo(() => {
@@ -36,7 +36,7 @@ const App: React.FC = React.memo(() => {
             <Projects id="projects"/>
             <Contacts id="contacts"/>
             <Footer/>
-            <img onClick={() => scrollTop()} className={style} src={upload} alt={`arrowToScrollUp`}/>
+            <img onClick={() => scrollTop()} className={style} src={arrow} alt={`arrowToScrollUp`}/>
         </div>
     );
 })

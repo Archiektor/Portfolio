@@ -4,7 +4,8 @@
 .contacts {
   @include flexDirection(column);
   @extend %flexCenter;
-  border: 2px coral solid;
+  //border: 2px coral solid;
+  background-color: black;
   padding-bottom: 10px;
 
   &__container {
@@ -40,11 +41,11 @@
   }
 
   &__input {
-    background-color: #acb8c2;
+    background-color: white;
   }
 
   &__textArea {
-    background-color: #acb8c2;
+    background-color: white;
     min-height: 80px;
   }
 

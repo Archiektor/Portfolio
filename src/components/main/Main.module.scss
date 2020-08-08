@@ -4,35 +4,36 @@
 .main {
   @include flexDirection(row);
   @extend %spaceB;
-  //background-color: #bee2a8;
   background-image: $linearGrad;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
+  //TODO normal height
   &__container {
+    //border: 2px greenyellow solid;
     height: 100vh;
     @include flexDirection(row);
     @extend %spaceB;
     @extend %container;
+    padding-top: 35px;
 
     @include mediaQuery($mobileL) {
+      @include marginHeight(30px, 30px);
       flex-direction: column;
-      margin-bottom: 90px;
-      height: 70vh;
+      height: auto;
     }
 
     @include mediaQuery($mobileM) {
+      @include marginHeight(25px, 25px);
       flex-direction: column;
-      margin-bottom: 25px;
-      height: 57vh;
+      height: auto;
     }
 
     @include mediaQuery($mobile) {
+      @include marginHeight(30px, 30px);
       flex-direction: column;
-      margin-top: 5px;
-      margin-bottom: 35px;
-      height: 63vh;
+      height: auto;
     }
   }
 

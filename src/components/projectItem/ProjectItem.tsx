@@ -14,7 +14,7 @@ const ProjectItem: React.FC<ProjectItemType> = React.memo(({descr, link, stack, 
         <div className={s.projectItem}>
             <div className={s.projectItem__picBlock}>
                 <img className={s.projectItem__pic} src={pic} alt={`projectLogo`}/>
-                <a className= {s.projectItem__link} href={link}><Button style={`upper`}/></a>
+                <a className= {s.projectItem__link} href={link}><Button style={`upper`}>Go</Button></a>
             </div>
             <div className={s.projectItem__textBlock}>
                 <div className={s.projectItem__name}><span>{props.children}</span></div>

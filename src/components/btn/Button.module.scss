@@ -16,9 +16,6 @@
     opacity: 1;
   }
 
-  &_upper {
-  }
-
   &_bigger {
     @include makeWH(130px, 40px);
     bottom: 0;
@@ -34,14 +31,16 @@
   background-size: contain;
   z-index: 22;
   position: absolute;
-  bottom: 4px;
+  top: 50%;
+  margin-top: -10px;
   left: 5px;
+  transition: all 2s ease-in;
 
   &:hover {
     animation: visit 2s ease;
   }
 }
-
+//TODO normal behavior
 @keyframes visit {
   0% {left: 0; opacity: 0.3}
   100% {left: 70px;opacity: 1.0}

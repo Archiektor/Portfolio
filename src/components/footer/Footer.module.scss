@@ -2,6 +2,7 @@
 @import "src/sass/variables/extensions";
 
 .footer {
+  background-image: $linearGrad;
 
   &__container {
     margin: 0 auto;
@@ -54,6 +55,7 @@
   &__copyright {
     margin-top: 10px;
     position: absolute;
+    color: $mainTextColor;
     bottom: 0;
     left: 0;
     right: 0;

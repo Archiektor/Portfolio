@@ -4,7 +4,7 @@
 .container {
   width: 100%;
   margin: 0 auto;
-  background-color: slategray;
+  background-color: black;
 
   &__upload {
     display: none;
@@ -12,7 +12,11 @@
     bottom: 20px;
     right: 20px;
     z-index: 1;
+    transform: rotate(-90deg);
     @include makeWH(30px, 30px);
+    background-color: white;
+    border-radius: 25%;
+    border: 2px gray;
 
     @include mediaQuery($mobile) {
       bottom: 5px;
