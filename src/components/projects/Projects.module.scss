@@ -2,7 +2,7 @@
 @import "src/sass/variables/extensions";
 
 .projects {
-  background-image: $linearGrad;
+  background-color: #4f4e4e;
   margin-top: -10px;
 
   &__container {
@@ -18,7 +18,8 @@
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
     grid-template-rows: repeat(2, 1.5fr);
-    grid-row-gap: 15px;
+    grid-row-gap: 35px;
+    padding-top: 20px;
 
     @include mediaQuery($large) {
       grid-template-columns: repeat(2, 1fr);

@@ -4,14 +4,9 @@
 .main {
   @include flexDirection(row);
   @extend %spaceB;
-  background-image: $linearGrad;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: #4f4e4e;
 
-  //TODO normal height
   &__container {
-    //border: 2px greenyellow solid;
     height: 100vh;
     @include flexDirection(row);
     @extend %spaceB;

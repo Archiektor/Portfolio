@@ -13,11 +13,10 @@
   align-items: center;
   margin-right: 50px;
   width: 30%;
-  position: fixed;
 
   &_visible {
     width: 80%;
-    position: absolute;
+    //position: absolute;
     top: 30px;
   }
 
@@ -30,7 +29,7 @@
       opacity: 1;
       position: absolute;
       top: 75px;
-      left: 25px;
+      left: 100px;
     }
   }
 
@@ -74,6 +73,9 @@
     @include flexCenter;
     flex-flow: column nowrap;
     transition: transform .2s ease, background-color .5s ease;
+    top: 20px;
+    position: absolute;
+    right: 100px;
 
     &_left {
       @extend %leftPartOfIcon;

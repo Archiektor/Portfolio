@@ -1,6 +1,15 @@
 @import "src/sass/variables/variables";
 @import "src/sass/variables/extensions";
 
+%placeholderFontSize {
+  &::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+  &::-moz-placeholder {
+    font-size: 16px;
+  }
+}
+
 .contacts {
   @include flexDirection(column);
   @extend %flexCenter;
@@ -41,12 +50,14 @@
   }
 
   &__input {
-    background-color: white;
+    background-color: $secondTextColor;
+    @extend %placeholderFontSize;
   }
 
   &__textArea {
-    background-color: white;
+    background-color: $secondTextColor;
     min-height: 80px;
+    @extend %placeholderFontSize;
   }
 
   &__btn {
