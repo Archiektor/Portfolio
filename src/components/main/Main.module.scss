@@ -90,7 +90,7 @@
       width: 103%;
       z-index: 1;
       opacity: 0.5;
-      background: #000000;
+      background: $firstBgColor;
     }
   }
 
@@ -115,7 +115,7 @@
     left: -20px;
     top: 20px;
     z-index: 1;
-    background: url("../../assets/pictures/nikki_v2.min.jpg") center/cover no-repeat;
+    background: url("../../assets/pictures/nikki_v3.jpg") center/cover no-repeat;
     border-radius: 10px;
 
     @include mediaQuery($mobile) {

@@ -1,9 +1,9 @@
 import React from 'react';
 import s from './Button.module.scss';
 
-type ButtonType = { style: string, hover: boolean };
+type ButtonType = { style: string, hover: boolean, onClick?: () => void };
 
-const Button: React.FC<ButtonType> = React.memo(({style, hover, ...props}) => {
+const Button: React.FC<ButtonType> = React.memo(({style, hover, onClick,...props}) => {
     let btnStyle: string;
     switch (style) {
         case 'upper':
@@ -17,9 +17,13 @@ const Button: React.FC<ButtonType> = React.memo(({style, hover, ...props}) => {
             btnStyle = `${s.btn}`;
     }
 
+    const onClickHandler = () => {
+        onClick!();
+    }
+
     let arrowStyle = hover? `${s.arrow} ${s.arrow_hoverEffect}` : `${s.arrow}`
     return (
-        <button className={btnStyle}>
+        <button onClick={onClickHandler} className={btnStyle}>
             <div className={arrowStyle}>{}</div>
             {props.children}
         </button>)
