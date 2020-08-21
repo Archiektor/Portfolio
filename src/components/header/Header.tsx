@@ -2,7 +2,7 @@ import React, {useCallback, useState} from 'react';
 import s from './Header.module.scss';
 import Nav from '../nav/Nav';
 
-const Header: React.FC<{}> = () => {
+const Header: React.FC<{}> = React.memo(() => {
     const [visible, setVisible] = useState<boolean>(false);
 
     let headerStyle = !visible ? `${s.header}` : `${s.header} ${s.header_visible}`;
@@ -19,6 +19,6 @@ const Header: React.FC<{}> = () => {
             </div>
         </div>
     )
-}
+})
 
 export default Header;

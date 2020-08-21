@@ -3,7 +3,7 @@
 
 .header {
   height: 60px;
-  background-color: $darkcolor;
+  background-color: $firstBgColor;
   color: whitesmoke;
   @include flexCenter;
   position: fixed;

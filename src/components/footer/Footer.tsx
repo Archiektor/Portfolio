@@ -4,7 +4,7 @@ import liLogo from '../../assets/icons/linkedin.png';
 import gitLogo from '../../assets/icons/github.png';
 import {Bounce} from 'react-awesome-reveal';
 
-const Footer: React.FC<{}> = () => {
+const Footer: React.FC<{}> = React.memo(() => {
     return (<div className={s.footer}>
         <div className={s.footer__container}>
             <Bounce triggerOnce={true}>
@@ -21,6 +21,6 @@ const Footer: React.FC<{}> = () => {
             <div className={s.footer__copyright}>© 2020 NikkiOdd, All Rights Reserved.</div>
         </div>
     </div>)
-}
+})
 
 export default Footer;

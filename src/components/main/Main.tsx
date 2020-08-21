@@ -4,7 +4,7 @@ import Particles from 'react-particles-js';
 import {particleOptions} from './particleOptions';
 import { Slide } from "react-awesome-reveal";
 
-const Main: React.FC<{ id: string }> = ({id}) => {
+const Main: React.FC<{ id: string }> = React.memo(({id}) => {
 
 
     return (
@@ -24,6 +24,6 @@ const Main: React.FC<{ id: string }> = ({id}) => {
             </div>
         </div>
     )
-}
+})
 
 export default Main;

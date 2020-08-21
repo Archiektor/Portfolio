@@ -4,7 +4,7 @@
 .main {
   @include flexDirection(row);
   @extend %spaceB;
-  background-color: #4f4e4e;
+  background-color: $secondTextColor;
   position: relative;
 
   &__particles {
@@ -13,7 +13,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: 0.3;
+    opacity: 0.6;
     //z-index: -1;
   }
 
@@ -47,6 +47,14 @@
     text-align: left;
     font: 500 1.1rem/1.4 $mainFont;
     color: #fff;
+
+    @include mediaQuery($mobile) {
+      margin-top: 15px;
+    }
+
+    @include mediaQuery($mobileM) {
+      margin-top: 15px
+    }
 
     & h3 {
       padding-bottom: 15px;
@@ -112,14 +120,14 @@
 
     @include mediaQuery($mobile) {
       @include makeWH(200px, 250px);
-      left: 10px;
-      top: 10px;
+      left: 20px;
+      top: 20px;
     }
 
     @include mediaQuery($mobileM) {
       @include makeWH(200px, 250px);
-      left: 10px;
-      top: 10px;
+      left: 20px;
+      top: 20px;
     }
   }
 }

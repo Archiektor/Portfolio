@@ -14,7 +14,7 @@
   @include flexDirection(column);
   @extend %flexCenter;
   //border: 2px coral solid;
-  background-color: black;
+  background-color: $firstBgColor;
   padding-bottom: 10px;
 
   &__container {
