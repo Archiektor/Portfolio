@@ -8,6 +8,7 @@ import projectPic3 from '../../assets/pictures/3.jpg';
 import projectPic4 from '../../assets/pictures/4.jpg';
 import projectPic5 from '../../assets/pictures/5.jpg';
 import projectPic6 from '../../assets/pictures/6.jpg';
+import {Slide} from 'react-awesome-reveal';
 
 
 const projectsData: Array<{ key: string, nameOfProject: string, link: string, descr: string, stack: string, pic: string }> = [
@@ -61,16 +62,18 @@ const projectsData: Array<{ key: string, nameOfProject: string, link: string, de
     },
 ]
 
-const Projects: React.FC<{id: string}> = React.memo(({id}) => {
+const Projects: React.FC<{ id: string }> = React.memo(({id}) => {
     return (
         <div className={s.projects} id={id}>
-           <div className={s.projects__container}>
-               <div><h3 className={s.projects__title}>{`Projects`}</h3></div>
-               <div className={s.projects__grid}>
-                   {projectsData.map(p => <ProjectItem key={p.key} pic={p.pic} link={p.link} descr={p.descr}
-                                                       stack={p.stack}>{p.nameOfProject}</ProjectItem>)}
-               </div>
-           </div>
+            <div className={s.projects__container}>
+                <Slide direction={'up'} triggerOnce={true}>
+                    <div><h3 className={s.projects__title}>{`Projects`}</h3></div>
+                </Slide>
+                <div className={s.projects__grid}>
+                    {projectsData.map(p => <ProjectItem key={p.key} pic={p.pic} link={p.link} descr={p.descr}
+                                                        stack={p.stack}>{p.nameOfProject}</ProjectItem>)}
+                </div>
+            </div>
         </div>
     )
 })

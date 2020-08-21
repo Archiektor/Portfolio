@@ -4,6 +4,7 @@ import SkillItem from '../skillItem/SkillItem';
 import {v1} from 'uuid';
 import react from '../../assets/icons/react.png';
 import sass from '../../assets/icons/sass.png';
+import {Slide} from 'react-awesome-reveal';
 
 
 type DataType = Array<{ key: string, nameOfSkill: string, img: string, description: string }>
@@ -51,7 +52,9 @@ const Skills: React.FC<{ id: string }> = React.memo(({id}) => {
         return (
             <div className={s.skills} id={id}>
                 <div className={s.skills__container}>
-                    <div className={s.skills__title}>My skills</div>
+                    <Slide direction={`up`} triggerOnce={true}>
+                        <div className={s.skills__title}>My skills</div>
+                    </Slide>
                     <div className={s.skills__grid}>
                         {skillsData.map(i => <SkillItem key={i.key} img={i.img}
                                                         description={i.description}>{i.nameOfSkill}</SkillItem>)}

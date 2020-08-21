@@ -5,6 +5,17 @@
   @include flexDirection(row);
   @extend %spaceB;
   background-color: #4f4e4e;
+  position: relative;
+
+  &__particles {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.3;
+    //z-index: -1;
+  }
 
   &__container {
     height: 100vh;
@@ -36,6 +47,7 @@
     text-align: left;
     font: 500 1.1rem/1.4 $mainFont;
     color: #fff;
+
     & h3 {
       padding-bottom: 15px;
     }
@@ -95,7 +107,7 @@
     left: -20px;
     top: 20px;
     z-index: 1;
-    background: url("https://images5.alphacoders.com/924/924242.jpg") center/cover no-repeat;
+    background: url("../../assets/pictures/nikki_v2.min.jpg") center/cover no-repeat;
     border-radius: 10px;
 
     @include mediaQuery($mobile) {

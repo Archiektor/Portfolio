@@ -77,6 +77,18 @@
     position: absolute;
     right: 100px;
 
+    @include mediaQuery($mobile) {
+      right: 20px;
+    }
+
+    @include mediaQuery($mobileM) {
+      right: 25px;
+    }
+
+    @include mediaQuery($mobileL) {
+      right: 30px;
+    }
+
     &_left {
       @extend %leftPartOfIcon;
     }

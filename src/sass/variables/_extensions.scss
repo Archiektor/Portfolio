@@ -18,6 +18,7 @@
   width: 80%;
   margin: 0 auto;
   padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 %firstLetter {
@@ -27,7 +28,7 @@
 }
 
 %title {
-  font: 700 24px/1.6 $mainFont;
+  font: 700 32px/1.6 $mainFont;
   text-align: center;
   margin: 10px 20px;
   @extend %textColor;
